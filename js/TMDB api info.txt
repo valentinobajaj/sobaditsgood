@@ -21,4 +21,4 @@ War:		10752
 Western:	37
 
 vote count:
-vote_count.gte=//VALUE
+vote_count.gte=(value)
