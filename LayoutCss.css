@@ -1,0 +1,47 @@
+/*html {
+	background-color: #000000;
+}*/
+
+/*body { 
+	background: url("bg/random.image.php") fixed no-repeat; 
+}*/
+
+.navbar {
+	font-size: 12px;
+}
+
+.nav.navbar-nav li a {
+ 	color: #00BC00;
+ }
+
+.nav.navbar-nav a:hover {
+	color: #747981;
+}
+
+.active {
+	color: #00BC00; 
+}
+
+.btn.btn-lg.btn-success {
+	background-color: #000000;
+	border-color: #747981;
+	color: #00BC00;
+	font: "Open Sans Bold";
+}
+
+.btn.btn-lg.btn-success:hover {
+	color: #747981;
+}
+
+.secondbutton {
+	margin-left: 7em;
+}
+
+#SurpriseAdvanced {
+	margin-bottom: 7em;
+}
+
+/** {
+   font-size: 14px;
+   line-height: 2;
+}*/
