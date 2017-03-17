@@ -16,6 +16,9 @@
 
 	<form id="advancedsearch">
 		<fieldset>
+		<legend>Advanced Search</legend>
+		<fieldset>
+		<legend>Choose Genres:</legend>
 		<select class="genres" multiple>
 			<option name="with_genres" value=28>Action</option>
 			<option name="with_genres" value=12>Adventure</option>
@@ -39,7 +42,7 @@
 		</select>
 		</fieldset>
 		<fieldset>
-		Sort by:
+		<legend>Sort by:</legend>
 			<input type="radio" class="sort" name="sort_by" value="popularity.asc">Popularity (lowest first)
 			<input type="radio" class="sort" name="sort_by" value="release_date.desc">Release Date (latest first)
 			<input type="radio" class="sort" name="sort_by" value="revenue.asc">Revenue (lowest first)
@@ -47,9 +50,10 @@
 			<input type="radio" class="sort" name="sort_by" value="vote_count.desc">Amount of Votes (highest first)
 		</fieldset>
 		<fieldset>
-		Include adult content:
+		<legend>Include adult content:</legend>
 			<input type="radio" class="adult" name="include_adult" value="true">Yes
 			<input type="radio" class="adult" name="include_adult" value="false" checked>No
+		</fieldset>
 		</fieldset>
 	</form>
 	<div id="advancedsearchresults">
