@@ -45,3 +45,26 @@
    font-size: 14px;
    line-height: 2;
 }*/
+
+.width1{
+	width: 250px;
+}
+
+#results-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+}
+.images{
+	height: 180px;
+}
+.image_backside{
+	height: 180px;
+	width: 130px;
+	background-color: black;
+	color: #00BC00;
+	font-weight: bolder;
+	padding: 10px;
+	border-style: solid;
+	border-color: #747981;
+}
