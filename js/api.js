@@ -55,19 +55,22 @@ $(document).ready(function() {
 		});
 		$.ajax(advancedSearchURL).done(function(response) {
 			$("#advancedsearchresults").empty();
-			console.log(response)
+			console.log(response);
 		});
 		$(document).ajaxError(function() {
 			$("#advancedsearchresults").empty();
 			$("#advancedsearchresults").append("<h1>There was a problem. Please try again later!</h1>");
 		});
-		$(document).ajaxSuccess(function(){
+		$(document).ajaxSuccess(function(data){
 			var i;
 			for (i = 0; i < 5; i++) {
 			var image = document.createElement('img');
-			$(image).attr('src', ("https://image.tmdb.org/t/p/w500".concat(Object.results[i].poster_path)));
+			var imageBaseUrl = "https://image.tmdb.org/t/p/w500";
+			var posterPath = data.results[i].poster_path;
+			var imageLocation = imageBaseUrl.concat(posterPath);
+			$(image).attr('src', imageLocation);
 			$('#advancedsearchresults').append(image);
-			console.log(Object.results[i].poster_path)
+			console.log(results[i].poster_path)
 			}
 		})
 	});
