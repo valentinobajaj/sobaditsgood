@@ -47,7 +47,7 @@ $(document).ready(function() {
 		adult = adult.concat(adultValue);
 		suffix = suffix.concat(adult);
 		console.log(suffix);
-		var baseURL = "https://api.themoviedb.org/3/discover/movie?vote_average.lte=5&vote_count.gte=10&page=1&include_video=false&language=en-US&api_key=9961a998f004227dea7c58371f36ef5f";
+		var baseURL = "https://api.themoviedb.org/3/discover/movie?vote_average.lte=5&vote_average.gte=0.1&vote_count.gte=10&page=1&include_video=false&language=en-US&api_key=9961a998f004227dea7c58371f36ef5f";
 		var advancedSearchURL = baseURL.concat(suffix);		
 		$(document).ajaxSend(function() {
 			$("#advancedsearchresults").empty();
