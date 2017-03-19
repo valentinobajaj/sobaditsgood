@@ -32,14 +32,13 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){  
-	$("#advancedClick").click(function() {
-		console.log("HI")
-		$("#dropdownAdvanced").fadeOut("slow");
-	});
+		$("#fadeout").fadeOut();
+	
 });
+
 $(document).ready(function(){  
-	$( "#advancedClick").click(function() {
-	  $("#dropdownAdvanced").fadeIn("slow");
+	$( ".advancedClick").click(function() {
+	  $("#fadeout").fadeIn("slow");
 	});
 });
 
