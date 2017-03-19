@@ -14,6 +14,7 @@
 <!-- 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	<script type="text/javascript" src="js/bootstrap.min.js"> </script>
 	<link rel="stylesheet" type="text/css" href="LayoutCss.css">
 	<script type="text/javascript" src="LayoutJs.js"></script>
@@ -74,7 +75,51 @@
 	<div id="SupriseAdvanced" class="container">
 	<a href="#" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-tree-deciduous"></span> Surprise me!</a>
 
-	<a href="#" class="btn btn-lg btn-success secondbutton"><span class="glyphicon glyphicon-search"></span> Advanced Search </a>
+	<a href="#" class="btn btn-lg btn-success secondbutton"><span class="glyphicon glyphicon-search" id="advancedClick"></span> Advanced Search </a>
+	</div>
+
+	<br>
+	<br>
+
+	<div class="dropdown" id="dropdownAdvanced">
+  		<button class="btn btn-secondary btn-lg dropdown-toggle btn-success width1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   			Select genre
+  		</button>
+  
+  		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		    <a class="dropdown-item" href="#" name="with_genres" value=12>Adventure</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=16>Animation</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=35>Comedy</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=80>Crime</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=99>Documentary</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=18>Drama</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=10751>Family</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=14>Fantasy</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=36>History</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=27>Horror</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=10402>Music</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=9648>Mystery</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=10749>Romance</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=878>Science Fiction</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=10770>TV Movie</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=53>Thriller</a>
+		    <a class="dropdown-item" href="#" name="with_genres" value=10752>War</a>
+  		</div>
+	</div>
+
+	<br>
+	<br>
+
+	<div id="results-container" class="container">
+		<img src="img1.jpg" class="images">
+		<img src="img1.jpg" class="images">
+		<img src="img1.jpg" class="images">
+		<img src="img1.jpg" class="images">
+		<div class="image_backside">
+			<p>Title: Kill Bill</p>
+			<p> Year: 2003</p>
+			<p> Directed by: Quentin Tarantino </p>
+		</div>
 	</div>
 
 	<div id="results" class="container">

@@ -31,4 +31,16 @@ $(document).ready(function(){
 });
 
 
+$(document).ready(function(){  
+	$("#advancedClick").click(function() {
+		console.log("HI")
+		$("#dropdownAdvanced").fadeOut("slow");
+	});
+});
+$(document).ready(function(){  
+	$( "#advancedClick").click(function() {
+	  $("#dropdownAdvanced").fadeIn("slow");
+	});
+});
+
 
