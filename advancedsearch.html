@@ -13,27 +13,52 @@
 </head>
 
 <body>
-	<select id="genres" multiple="multiple">
-		<option name="with_genres" value=28 selected="selected">Action</option>
-		<option name="with_genres" value=12>Adventure</option>
-		<option name="with_genres" value=16>Animation</option>
-		<option name="with_genres" value=35>Comedy</option>
-		<option name="with_genres" value=80>Crime</option>
-		<option name="with_genres" value=99>Documentary</option>
-		<option name="with_genres" value=18>Drama</option>
-		<option name="with_genres" value=10751>Family</option>
-		<option name="with_genres" value=14>Fantasy</option>
-		<option name="with_genres" value=36>History</option>
-		<option name="with_genres" value=27>Horror</option>
-		<option name="with_genres" value=10402>Music</option>
-		<option name="with_genres" value=9648>Mystery</option>
-		<option name="with_genres" value=10749>Romance</option>
-		<option name="with_genres" value=878>Science Fiction</option>
-		<option name="with_genres" value=10770>TV Movie</option>
-		<option name="with_genres" value=53>Thriller</option>
-		<option name="with_genres" value=10752>War</option>
-		<option name="with_genres" value=37>Western</option>
-	</select>
+
+	<form id="advancedsearch">
+		<fieldset>
+		<legend>Advanced Search</legend>
+		<fieldset>
+		<legend>Choose Genres:</legend>
+		<select class="genres" multiple>
+			<option name="with_genres" value=28 selected="selected">Action</option>
+			<option name="with_genres" value=12>Adventure</option>
+			<option name="with_genres" value=16>Animation</option>
+			<option name="with_genres" value=35>Comedy</option>
+			<option name="with_genres" value=80>Crime</option>
+			<option name="with_genres" value=99>Documentary</option>
+			<option name="with_genres" value=18>Drama</option>
+			<option name="with_genres" value=10751>Family</option>
+			<option name="with_genres" value=14>Fantasy</option>
+			<option name="with_genres" value=36>History</option>
+			<option name="with_genres" value=27>Horror</option>
+			<option name="with_genres" value=10402>Music</option>
+			<option name="with_genres" value=9648>Mystery</option>
+			<option name="with_genres" value=10749>Romance</option>
+			<option name="with_genres" value=878>Science Fiction</option>
+			<option name="with_genres" value=10770>TV Movie</option>
+			<option name="with_genres" value=53>Thriller</option>
+			<option name="with_genres" value=10752>War</option>
+			<option name="with_genres" value=37>Western</option>
+		</select>
+		</fieldset>
+		<fieldset>
+		<legend>Sort by:</legend>
+			<input type="radio" class="sort" name="sort_by" value="popularity.asc">Popularity (lowest first)
+			<input type="radio" class="sort" name="sort_by" value="release_date.desc">Release Date (latest first)
+			<input type="radio" class="sort" name="sort_by" value="revenue.asc">Revenue (lowest first)
+			<input type="radio" class="sort" name="sort_by" value="vote_average.asc" checked>Average Vote (lowest first)
+			<input type="radio" class="sort" name="sort_by" value="vote_count.desc">Amount of Votes (highest first)
+		</fieldset>
+		<fieldset>
+		<legend>Include adult content:</legend>
+			<input type="radio" class="adult" name="include_adult" value="true">Yes
+			<input type="radio" class="adult" name="include_adult" value="false" checked>No
+		</fieldset>
+		</fieldset>
+	</form>
+	<div id="advancedsearchresults">
+	</div>
+
 </body>
 
 </html>
