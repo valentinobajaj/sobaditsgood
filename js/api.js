@@ -57,5 +57,16 @@ $(document).ready(function() {
 			$("#advancedsearchresults").empty();
 			console.log(response)
 		});
+		$(document).ajaxError(function() {
+			$("#advancedsearchresults").empty();
+			$("#advancedsearchresults").append("<h1>There was a problem. Please try again later!</h1>");
+		});
+		$(document).ajaxSuccess(function(){
+			var i;
+			for (i = 0; i < 5; i++)
+			var image = document.createElement('img');
+			$(image).attr('src', ("https://image.tmdb.org/t/p/w500" + results[i].poster_path));
+			$('#advancedsearchresults').append(image);
+		})
 	});
 });
