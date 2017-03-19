@@ -63,10 +63,12 @@ $(document).ready(function() {
 		});
 		$(document).ajaxSuccess(function(){
 			var i;
-			for (i = 0; i < 5; i++)
+			for (i = 0; i < 5; i++) {
 			var image = document.createElement('img');
-			$(image).attr('src', ("https://image.tmdb.org/t/p/w500" + results[i].poster_path));
+			$(image).attr('src', ("https://image.tmdb.org/t/p/w500".concat(Object.results[i].poster_path)));
 			$('#advancedsearchresults').append(image);
+			console.log(Object.results[i].poster_path)
+			}
 		})
 	});
 });
