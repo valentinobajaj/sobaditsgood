@@ -64,12 +64,14 @@ $(document).ready(function() {
     		$("#advancedsearchresults").empty();
 			var i;
 			for (i = 0; i < 5; i++) {
-				var image = document.createElement('img');
+				// var image = document.createElement('img');
 				var imageBaseUrl = "https://image.tmdb.org/t/p/w300";
 				var posterPath = data.results[i].poster_path;
 				var imageLocation = imageBaseUrl.concat(posterPath);
-				$(image).attr('src', imageLocation);
-				$('#advancedsearchresults').append(image);
+				var movieBaseUrl = "https://www.themoviedb.org/movie/";
+				var movieId = data.results[i].id;
+				var movieLink = movieBaseUrl.concat(movieId)
+				$("#advancedsearchresults").append("<a href=" + movieLink + " target=_blank><img src=" + imageLocation + "></a>")
 			}
 		});
 	});
