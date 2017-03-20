@@ -68,7 +68,7 @@
 }
 
 #genres_select{
-	width: 300px;
+	width: 400px;
 	background-color: black;
 	color:#606060;
 	font-size: 12px;
@@ -87,23 +87,18 @@
 	display: inline-block;
 }
 
-#results-container {
+#advancedsearchresults {
   display: flex;
   justify-content: space-around;
   flex-wrap:wrap;
+  margin: auto;
+  padding: 20px;
 }
 
-.images{
-	height: 250px;
+
+img{
+	height: 400px;	
+	margin: 20px;
 }
 
-.image_backside{
-	height: 250px;
-	width: 170px;
-	background-color: black;
-	color: #00BC00;
-	padding: 10px;
-	border-style: solid;
-	border-color: #747981;
-}
 
