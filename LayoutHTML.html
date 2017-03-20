@@ -8,22 +8,32 @@
 
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext">
 	
-<!-- 
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">  --><!-- Can still change fonts --> 
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<!-- 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 	<script type="text/javascript" src="js/bootstrap.min.js"> </script>
+
+	<!--Main Layout of this HTML file -->
 	<link rel="stylesheet" type="text/css" href="LayoutCss.css">
 	<script type="text/javascript" src="LayoutJs.js"></script>
 
 	<!-- for the text input form: -->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-<!-- 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" /> -->
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="css/set1.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout2.css" />
+	<link rel="stylesheet" type="text/css" href="css/searchField.css" />
+	
+	<!-- JavaScript API & Randomizer button -->
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript" src="js/randomizer.js"></script>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+
+	<!-- custom API JS -->
+	<script type="text/javascript" src="js/api.js"></script>
+
 
 </head>
 
@@ -32,36 +42,25 @@
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
 	  <div class="navbar-header">
-	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	      <span class="sr-only">Toggle navigation</span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	    </button>
-	    <a class="navbar-brand" href="#">So Bad It's Good</a>
+	    <a class="navbar-brand" href="#">SoBadItsGood.tk</a>
 	  </div>
+
 	  <div class="collapse navbar-collapse">
 	    <ul class="nav navbar-nav pull-right">
 	      <li class="active"><a href="#">Home</a>
-	      </li> <!-- If we want to use a navbar like this, we should create a few extra html's with the other options (random, search by title and search by parameter for example) so that the active class will 'change' if you know what I mean. We can discuss this and if we agree I'll create those extra htmls, not a lot of work :) -->
-	      <li><a href="#random">I'm feeling lucky</a>
+	      </li> 
+	      <li><a href="#surprise">I'm feeling lucky</a>
 	      </li>
-	      <li><a href="#titleSearch">Search by title</a>
-	      </li>
-	      <li><a href="#advancedSearch" class="advancedClick">Advanced Search</a>
-	      </li>
-	      <li><a href="#help" class="cta">Help</a> <!-- just an example, let's decide thursday what we want to include and what not. CTA class is Call To Action, in case we want to include a form or so -->
-	      </li>
+	      <li><a href="#fadeout">Advanced Search</a> <!--check the href link for this one after Kate has integrated the lot --> </li>
 	    </ul>
-	  </div>
-	  <!--/.nav-collapse -->
+	  </div> <!--/.nav-collapse -->
 	</div>
 	</div> <!--End Navbar --> 
 	<br>
 
 
-	<section class="content bgcolor">
-	<!-- 	<h2>Hi there! Intro text here? </h2> -->
+	<section class="content">
+		<p class="headerTitle">SoBadItsGood.tk - The Place To Find Movies That Are So Bad, They're Good</p>
 		<span class="input input--kuro">
 			<input class="input__field input__field--kuro" type="text" id="input-7" />
 			<label class="input__label input__label--kuro" for="input-7">
@@ -70,10 +69,9 @@
 		</span>
 	</section>
 
+	<div id="buttons" class="container">
 
-
-	<div id="SupriseAdvanced" class="container">
-	<a href="#" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-tree-deciduous"></span> Surprise me!</a>
+	<a id="surprise" href="#" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-tree-deciduous"></span> Surprise me!</a>
 
 	<a href="#" class="btn btn-lg btn-success secondbutton advancedClick" ><span class="glyphicon glyphicon-search" ></span> Advanced Search </a>
 	</div>
@@ -82,31 +80,32 @@
 	<br>
 
 	<div id="fadeout">
+	<form id="advancedsearch">
 
 		<fieldset class="fieldset">
 			<legend class="legend">Choose Genres:</legend>
 
 
-		<select class="genres" multiple id="genres_select" class="green">
-				<option name="with_genres" value=28>Action</option>
-				<option name="with_genres" value=12>Adventure</option>
-				<option name="with_genres" value=16>Animation</option>
-				<option name="with_genres" value=35>Comedy</option>
-				<option name="with_genres" value=80>Crime</option>
-				<option name="with_genres" value=99>Documentary</option>
-				<option name="with_genres" value=18>Drama</option>
-				<option name="with_genres" value=10751>Family</option>
-				<option name="with_genres" value=14>Fantasy</option>
-				<option name="with_genres" value=36>History</option>
-				<option name="with_genres" value=27>Horror</option>
-				<option name="with_genres" value=10402>Music</option>
-				<option name="with_genres" value=9648>Mystery</option>
-				<option name="with_genres" value=10749>Romance</option>
-				<option name="with_genres" value=878>Science Fiction</option>
-				<option name="with_genres" value=10770>TV Movie</option>
-				<option name="with_genres" value=53>Thriller</option>
-				<option name="with_genres" value=10752>War</option>
-				<option name="with_genres" value=37>Western</option>
+		<select class="genres green " multiple id="genres_select" class="green">
+			<option name="with_genres" value=28 selected="selected">Action</option>
+			<option name="with_genres" value=12>Adventure</option>
+			<option name="with_genres" value=16>Animation</option>
+			<option name="with_genres" value=35>Comedy</option>
+			<option name="with_genres" value=80>Crime</option>
+			<option name="with_genres" value=99>Documentary</option>
+			<option name="with_genres" value=18>Drama</option>
+			<option name="with_genres" value=10751>Family</option>
+			<option name="with_genres" value=14>Fantasy</option>
+			<option name="with_genres" value=36>History</option>
+			<option name="with_genres" value=27>Horror</option>
+			<option name="with_genres" value=10402>Music</option>
+			<option name="with_genres" value=9648>Mystery</option>
+			<option name="with_genres" value=10749>Romance</option>
+			<option name="with_genres" value=878>Science Fiction</option>
+			<option name="with_genres" value=10770>TV Movie</option>
+			<option name="with_genres" value=53>Thriller</option>
+			<option name="with_genres" value=10752>War</option>
+			<option name="with_genres" value=37>Western</option>
 		</select>
 
 		<br>
@@ -153,38 +152,22 @@
 			<div class="inputs_text"> No </div>
 		</fieldset>
 	</div>
+	</form>
 
 	<br>
 	<br>
 	<br>
 
-	<div id="results-container" class="container">
-		<img src="img1.jpg" class="images">
-		<img src="img1.jpg" class="images">
-		<img src="img1.jpg" class="images">
-		<img src="img1.jpg" class="images">
-		<div class="image_backside">
-			<br>
-			<p>Title: Kill Bill</p>
-			<p> Year: 2003</p>
-			<p> Directed by: Quentin Tarantino </p>
-		</div>
-	</div>
-<<<<<<< HEAD
-=======
-
-	<div id="results" class="container">
-		<p>All results from the search option will show up here, either from the random-search button or from Valentino's api js stuff </p>		
+	<div id="advancedsearchresults" >
+		Here is the DIV for the search results.
 	</div>
 
-	<div id="results" class="container">
-		<p>All results from the search option will show up here, either from the random-search button or from Valentino's api js stuff </p>		
-	</div>
-	<div id="results" class="container">
-		<p>All results from the search option will show up here, either from the random-search button or from Valentino's api js stuff </p>		
-	</div>
 
-	
->>>>>>> master
+	<footer class="footer">
+	    <div class="container">
+	        <p class="">&copy; 2017 MaartenValentinoKateLara ++ Turing Society <a href="https://tsociety.io">https://tsociety.io/</a></p>
+	    </div>
+	</footer>
+
 </body>
 </html>
