@@ -28,6 +28,13 @@
 	<script type="text/javascript" src="js/api.js"></script>
 	<script type="text/javascript" src="js/randomizer.js"></script>
 
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+
+	<!-- custom API JS -->
+	<script type="text/javascript" src="js/api.js"></script>
+
+
 </head>
 
 <body class="container body" id="body">
@@ -73,31 +80,32 @@
 	<br>
 
 	<div id="fadeout">
+	<form id="advancedsearch">
 
 		<fieldset class="fieldset">
 			<legend class="legend">Choose Genres:</legend>
 
 
-		<select class="genres green" multiple id="genres_select" class="green">
-				<option name="with_genres" value=28>Action</option>
-				<option name="with_genres" value=12>Adventure</option>
-				<option name="with_genres" value=16>Animation</option>
-				<option name="with_genres" value=35>Comedy</option>
-				<option name="with_genres" value=80>Crime</option>
-				<option name="with_genres" value=99>Documentary</option>
-				<option name="with_genres" value=18>Drama</option>
-				<option name="with_genres" value=10751>Family</option>
-				<option name="with_genres" value=14>Fantasy</option>
-				<option name="with_genres" value=36>History</option>
-				<option name="with_genres" value=27>Horror</option>
-				<option name="with_genres" value=10402>Music</option>
-				<option name="with_genres" value=9648>Mystery</option>
-				<option name="with_genres" value=10749>Romance</option>
-				<option name="with_genres" value=878>Science Fiction</option>
-				<option name="with_genres" value=10770>TV Movie</option>
-				<option name="with_genres" value=53>Thriller</option>
-				<option name="with_genres" value=10752>War</option>
-				<option name="with_genres" value=37>Western</option>
+		<select class="genres green " multiple id="genres_select" class="green">
+			<option name="with_genres" value=28 selected="selected">Action</option>
+			<option name="with_genres" value=12>Adventure</option>
+			<option name="with_genres" value=16>Animation</option>
+			<option name="with_genres" value=35>Comedy</option>
+			<option name="with_genres" value=80>Crime</option>
+			<option name="with_genres" value=99>Documentary</option>
+			<option name="with_genres" value=18>Drama</option>
+			<option name="with_genres" value=10751>Family</option>
+			<option name="with_genres" value=14>Fantasy</option>
+			<option name="with_genres" value=36>History</option>
+			<option name="with_genres" value=27>Horror</option>
+			<option name="with_genres" value=10402>Music</option>
+			<option name="with_genres" value=9648>Mystery</option>
+			<option name="with_genres" value=10749>Romance</option>
+			<option name="with_genres" value=878>Science Fiction</option>
+			<option name="with_genres" value=10770>TV Movie</option>
+			<option name="with_genres" value=53>Thriller</option>
+			<option name="with_genres" value=10752>War</option>
+			<option name="with_genres" value=37>Western</option>
 		</select>
 
 		<br>
@@ -144,23 +152,16 @@
 			<div class="inputs_text"> No </div>
 		</fieldset>
 	</div>
+	</form>
 
 	<br>
 	<br>
 	<br>
 
-	<div id="results-container" class="container">
-		<img src="img1.jpg" class="images">
-		<img src="img1.jpg" class="images">
-		<img src="img1.jpg" class="images">
-		<img src="img1.jpg" class="images">
-		<div class="image_backside">
-			<br>
-			<p>Title: Kill Bill</p>
-			<p> Year: 2003</p>
-			<p> Directed by: Quentin Tarantino </p>
-		</div>
+	<div id="advancedsearchresults" >
+		Here is the DIV for the search results.
 	</div>
+
 
 	<footer class="footer">
 	    <div class="container">
