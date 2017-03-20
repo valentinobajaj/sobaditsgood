@@ -14,6 +14,7 @@
 <!-- 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	<script type="text/javascript" src="js/bootstrap.min.js"> </script>
 	<link rel="stylesheet" type="text/css" href="LayoutCss.css">
 	<script type="text/javascript" src="LayoutJs.js"></script>
@@ -27,7 +28,7 @@
 
 </head>
 
-<body class="container body">
+<body class="container body" id="body">
 
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -48,7 +49,7 @@
 	      </li>
 	      <li><a href="#titleSearch">Search by title</a>
 	      </li>
-	      <li><a href="#advancedSearch">Advanced Search</a>
+	      <li><a href="#advancedSearch" class="advancedClick">Advanced Search</a>
 	      </li>
 	      <li><a href="#help" class="cta">Help</a> <!-- just an example, let's decide thursday what we want to include and what not. CTA class is Call To Action, in case we want to include a form or so -->
 	      </li>
@@ -72,15 +73,125 @@
 	</form>
 	</section>
 
-	<div id="SupriseAdvanced">
+
+
+	<div id="SupriseAdvanced" class="container">
 	<a href="#" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-tree-deciduous"></span> Surprise me!</a>
 
-	<a href="#" class="btn btn-lg btn-success secondbutton"><span class="glyphicon glyphicon-search"></span> Advanced Search </a>
+	<a href="#" class="btn btn-lg btn-success secondbutton advancedClick" ><span class="glyphicon glyphicon-search" ></span> Advanced Search </a>
+	</div>
+
+	<br>
+	<br>
+
+	<div id="fadeout">
+
+		<fieldset class="fieldset">
+			<legend class="legend">Choose Genres:</legend>
+
+
+		<select class="genres" multiple id="genres_select" class="green">
+				<option name="with_genres" value=28>Action</option>
+				<option name="with_genres" value=12>Adventure</option>
+				<option name="with_genres" value=16>Animation</option>
+				<option name="with_genres" value=35>Comedy</option>
+				<option name="with_genres" value=80>Crime</option>
+				<option name="with_genres" value=99>Documentary</option>
+				<option name="with_genres" value=18>Drama</option>
+				<option name="with_genres" value=10751>Family</option>
+				<option name="with_genres" value=14>Fantasy</option>
+				<option name="with_genres" value=36>History</option>
+				<option name="with_genres" value=27>Horror</option>
+				<option name="with_genres" value=10402>Music</option>
+				<option name="with_genres" value=9648>Mystery</option>
+				<option name="with_genres" value=10749>Romance</option>
+				<option name="with_genres" value=878>Science Fiction</option>
+				<option name="with_genres" value=10770>TV Movie</option>
+				<option name="with_genres" value=53>Thriller</option>
+				<option name="with_genres" value=10752>War</option>
+				<option name="with_genres" value=37>Western</option>
+		</select>
+
+		<br>
+		<br>
+
+		</fieldset>
+
+		<br>
+		<br>
+
+		<fieldset class="fieldset">
+			<legend class="legend">Sort by:</legend>
+			
+			<input type="radio" class="sort" name="sort_by" value="popularity.asc"> 
+			<div class="inputs_text"> Popularity (lowest first) </div>
+			
+			<input type="radio" class="sort" name="sort_by" value="release_date.desc">   
+			<div class="inputs_text"> Release Date (latest first)</div>
+
+			<br>
+			
+			<input type="radio" class="sort" name="sort_by" value="revenue.asc">
+			<div class="inputs_text"> Revenue (lowest first) </div>
+
+			<input type="radio" class="sort" name="sort_by" value="vote_average.asc" checked>
+			<div class="inputs_text"> Average Vote (lowest first)</div>
+
+			<br>
+
+			<input type="radio" class="sort" name="sort_by" value="vote_count.desc">
+			<div class="inputs_text"> Amount of Votes (highest first)</div>
+		</fieldset>
+
+		<br>
+		<br>
+
+		<fieldset class="fieldset">
+			<legend class="legend">Include adult content:</legend>
+
+			<input type="radio" class="adult" name="include_adult" value="true">
+			<div class="inputs_text"> Yes</div>
+				
+			<input type="radio" class="adult" name="include_adult" value="false" checked>
+			<div class="inputs_text"> No </div>
+		</fieldset>
 	</div>
 	
 <div id="search-result">
     
 </div>
 
+	<br>
+	<br>
+	<br>
+
+	<div id="results-container" class="container">
+		<img src="img1.jpg" class="images">
+		<img src="img1.jpg" class="images">
+		<img src="img1.jpg" class="images">
+		<img src="img1.jpg" class="images">
+		<div class="image_backside">
+			<br>
+			<p>Title: Kill Bill</p>
+			<p> Year: 2003</p>
+			<p> Directed by: Quentin Tarantino </p>
+		</div>
+	</div>
+<<<<<<< HEAD
+=======
+
+	<div id="results" class="container">
+		<p>All results from the search option will show up here, either from the random-search button or from Valentino's api js stuff </p>		
+	</div>
+
+	<div id="results" class="container">
+		<p>All results from the search option will show up here, either from the random-search button or from Valentino's api js stuff </p>		
+	</div>
+	<div id="results" class="container">
+		<p>All results from the search option will show up here, either from the random-search button or from Valentino's api js stuff </p>		
+	</div>
+
+	
+>>>>>>> master
 </body>
 </html>

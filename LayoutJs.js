@@ -31,4 +31,15 @@ $(document).ready(function(){
 });
 
 
+$(document).ready(function(){  
+		$("#fadeout").fadeOut();
+	
+});
+
+$(document).ready(function(){  
+	$( ".advancedClick").click(function() {
+	  $("#fadeout").fadeIn("slow");
+	});
+});
+
 
