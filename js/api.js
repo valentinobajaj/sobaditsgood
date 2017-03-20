@@ -1,4 +1,5 @@
 //coding by Maarten Ronteltap
+// API key = 9961a998f004227dea7c58371f36ef5f
 
 $(document).ready(function() {
 
@@ -57,49 +58,19 @@ $(document).ready(function() {
 		var advancedSearchURL = baseURL.concat(suffix);
 
 
-		//ThemovieDB.org wants these search settings to always be included
-		var advancedSearchSettings = {
-			"async": true,
-			"crossDomain": true,
-			"method": "GET",
-			"headers": {},
-			"data": "{}"
-		};
-		advancedSearchSettings.URL = advancedSearchURL;
-
-		//check which parameters are included before the AJAX request is sent
-		console.log(advancedSearchSettings);
-
-		//display "Searching..." message while the search is running
-		$(document).ajaxSend(function() {
-			$("#advancedsearchresults").empty();
-			$("#advancedsearchresults").append("<h1>Searching...</h1>");
-		});
-
-
-		//this sends the request
-		$.ajax(advancedSearchSettings);
-
-		//this is the success handler
-		$(document).ajaxSuccess(function(data) {
-			$("#advancedsearchresults").empty();
-			console.log(data);
+		// //this sends the request
+		$.get(advancedSearchURL, function(data) {
+    		console.log(data);
+    		$("#advancedsearchresults").empty();
 			var i;
 			for (i = 0; i < 5; i++) {
 				var image = document.createElement('img');
-				var imageBaseUrl = "https://image.tmdb.org/t/p/w500";
-				var posterPath = data[i].results.poster_path;
+				var imageBaseUrl = "https://image.tmdb.org/t/p/w300";
+				var posterPath = data.results[i].poster_path;
 				var imageLocation = imageBaseUrl.concat(posterPath);
 				$(image).attr('src', imageLocation);
 				$('#advancedsearchresults').append(image);
-				console.log(results[i].poster_path)
 			}
-		});
-
-		// this is the error handler
-		$(document).ajaxError(function() {
-		$("#advancedsearchresults").empty();
-		$("#advancedsearchresults").append("<h1>There was a problem. Please try again later!</h1>");
 		});
 	});
 });
