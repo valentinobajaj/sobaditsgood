@@ -3,17 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<meta> 	<!-- SEO search tags here?-->
 	<title>So Bad It's Good</title>
 
+	<!-- Fonts -->
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext">
 	
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"> </script>
+
+	<!-- JavaScript API & Randomizer button & Smooth Scrolling-->
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript" src="js/randomizer.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
 
 	<!--Main Layout of this HTML file -->
 	<link rel="stylesheet" type="text/css" href="LayoutCss.css">
@@ -23,41 +29,38 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/layout2.css" />
 	<link rel="stylesheet" type="text/css" href="css/searchField.css" />
-	
-	<!-- JavaScript API & Randomizer button -->
-	<script type="text/javascript" src="js/api.js"></script>
-	<script type="text/javascript" src="js/randomizer.js"></script>
-
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
-
-	<!-- custom API JS -->
-	<script type="text/javascript" src="js/api.js"></script>
 
 
 </head>
 
-<body class="container body" id="body">
+<body id="body" class="container body">
 
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
 	  <div class="navbar-header">
+	  	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
 	    <a class="navbar-brand" href="#">SoBadItsGood.tk</a>
 	  </div>
 
 	  <div class="collapse navbar-collapse">
 	    <ul class="nav navbar-nav pull-right">
-	      <li class="active"><a href="#">Home</a>
+	      <li class="active"><a href="#" class="scroll">Home</a>
 	      </li> 
-	      <li><a href="#surprise">I'm feeling lucky</a>
+	      <li><a href="#surprise" class="scroll">Surprise Me</a>
 	      </li>
-	      <li><a href="#fadeout">Advanced Search</a> <!--check the href link for this one after Kate has integrated the lot --> </li>
+	      <li><a href="#fadeout" class="scroll">Advanced Search</a>
+	      </li>
 	    </ul>
 	  </div> <!--/.nav-collapse -->
-	</div>
+	</div> <!-- end container -->
 	</div> <!--End Navbar --> 
+	
 	<br>
-
 
 	<section class="content">
 		<p class="headerTitle">SoBadItsGood.tk - The Place To Find Movies That Are So Bad, They're Good</p>
@@ -85,8 +88,7 @@
 		<fieldset class="fieldset">
 			<legend class="legend">Choose Genres:</legend>
 
-
-		<select class="genres green " multiple id="genres_select" class="green">
+		<select class="genres" multiple id="genres_select">
 			<option name="with_genres" value=28 selected="selected">Action</option>
 			<option name="with_genres" value=12>Adventure</option>
 			<option name="with_genres" value=16>Animation</option>
@@ -159,9 +161,8 @@
 	<br>
 
 	<div id="advancedsearchresults" >
-		Here is the DIV for the search results.
+		Here is the DIV for the search results. -- Should also only be visible when someone actually searches for something! (Just like the advanced search box)
 	</div>
-
 
 	<footer class="footer">
 	    <div class="container">
