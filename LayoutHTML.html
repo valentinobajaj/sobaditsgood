@@ -18,6 +18,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"> </script>
 	<link rel="stylesheet" type="text/css" href="LayoutCss.css">
 	<script type="text/javascript" src="LayoutJs.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
 
 	<!-- for the text input form: -->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
@@ -62,12 +63,14 @@
 
 	<section class="content bgcolor">
 	<!-- 	<h2>Hi there! Intro text here? </h2> -->
+	<form id="search-form" action="LayoutHTML.html" method="post">
 		<span class="input input--kuro">
-			<input class="input__field input__field--kuro" type="text" id="input-7" />
+			<input class="input__field input__field--kuro" type="text" id="input-7"/>
 			<label class="input__label input__label--kuro" for="input-7">
 				<span class="input__label-content input__label-content--kuro">What's the worst movie you've ever seen?</span>
 			</label>
 		</span>
+	</form>
 	</section>
 
 
@@ -153,6 +156,10 @@
 			<div class="inputs_text"> No </div>
 		</fieldset>
 	</div>
+	
+<div id="search-result">
+    
+</div>
 
 	<br>
 	<br>
