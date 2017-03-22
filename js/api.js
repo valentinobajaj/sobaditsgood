@@ -60,18 +60,18 @@ $(document).ready(function() {
 		// this sends the request
 		$.get(advancedSearchURL, function(data) {
 			// success handler
-    		console.log(data);
-    		$("#advancedsearchresults").empty();
+			console.log(data);
+			$("#advancedsearchresults").empty();
 			var i;
-			for (i = 0; i < 5; i++) {
+			for (i = 0; i < 6; i++) {
 				var imageBaseUrl = "https://image.tmdb.org/t/p/w300";
 				var posterPath = data.results[i].poster_path;
 				var imageLocation = imageBaseUrl.concat(posterPath);
 				var movieBaseUrl = "https://www.themoviedb.org/movie/";
 				var movieId = data.results[i].id;
 				var movieLink = movieBaseUrl.concat(movieId)
-				$("#advancedsearchresults").append("<a href=" + movieLink + " target=_blank><img src=" + imageLocation + "></a>")
-			}
+				$("#advancedsearchresults").append("<a href=" + movieLink + " target=_blank><img src=" + imageLocation + "></a>");
+			};
 		});
 	});
 });
