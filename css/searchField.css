@@ -53,31 +53,11 @@
 	user-select: none;
 }
 
-.input__label-content {
-	position: relative;
-	display: block;
-	padding: 1.3em 0; /*padding input field box (before 1.6em) */
-	width: 100%;
-	margin: 5em 0; /* added this one for bigger box */
-}
-
-.graphic {
-	position: absolute;
-	top: 0;
-	left: 0;
-	fill: none;
-}
-
-.icon {
-	color: #ddd;
-	font-size: 150%;
-}
-
 /* Text Input Field 'Kuro' */
 .input--kuro {
 	max-width: 520px;
 	margin-bottom: 3em;
-	margin-top: 10em;
+	margin-top: 5em;
 }
 
 .input__field--kuro {
