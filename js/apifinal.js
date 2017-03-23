@@ -117,6 +117,7 @@ $(document).ready(function() {
 		var advancedSearchURL = baseURL.concat(suffix);
 		$.get(advancedSearchURL, function(data) {
 			$("#searchresults").empty();
+			$("#searchresults").append("<h2>Here are your search results.<br>Have a good cringefest!</h2>")
 			var i;
 			for (i = 0; i < 6; i++) {
 				var imageBaseUrl = "https://image.tmdb.org/t/p/w300";
