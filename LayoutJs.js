@@ -10,36 +10,16 @@ $(document).ready(function(){
 		}
 	});
 
-
-	// if (document.getElementById) { window.onload = swap };
-	// 	function swap() {
-	// 	var numimages=2;
-	// 	rndimg = new Array("bg/walterwhite.jpg", "bg/HoC.jpg");
-	// 	x=(Math.floor(Math.random()*numimages));
-	// 	randomimage=(rndimg[x]);
-	// 	document.getElementById(".body").style.backgroundImage = "url("+ randomimage +")";
-	// }
-  // $(function(){
-  //   var includes = $('[data-include]');
-  //   jQuery.each(includes, function(){
-  //     var file = $(this).data('include') + '.html';
-  //     $(this).load(file);
-  //   });
-  // });
-
-
-});
-
-
-$(document).ready(function(){  
-		$("#fadeout").fadeOut();
-	
-});
-
-$(document).ready(function(){  
-	$( ".advancedClick").click(function() {
-	  $("#fadeout").fadeIn("slow");
+	$(document).ready(function(){  
+			$("#fadeout").fadeOut();
+		
 	});
+
+	$(document).ready(function(){  
+		$( ".advancedClick").click(function() {
+		  $("#fadeout").fadeIn("slow");
+		});
+	});
+
+
 });
-
-
