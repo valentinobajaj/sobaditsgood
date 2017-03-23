@@ -87,8 +87,8 @@
 	display: inline-block;
 }
 
-#searchresults {
-  display: flex;
+#searchresults img{
+  display: inline-block;
   justify-content: space-around;
   flex-wrap:wrap;
   margin: auto;
