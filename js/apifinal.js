@@ -46,7 +46,7 @@ $(document).ready(function() {
 		var key = "?api_key=9961a998f004227dea7c58371f36ef5f";
 		var searchById = baseURL.concat(movieId,key);
 		$("#searchresults").empty();
-		$("#searchresults").append("<h2>These movies are similar to " + $(this).text() + "<br>...and SO BAD THAT THEY'RE GOOD:</h2>");
+		$("#searchresults").append("<h2>These movies are similar to " + $(this).text() + "...<br>...AND SO BAD THAT THEY'RE GOOD:</h2>");
 		$.get(searchById, function(data){
 			if (data.genres.length < 1) {
 				$("#searchresults").append("<h2>Sorry, we could not find similar (BAD) movies!</h2>");
