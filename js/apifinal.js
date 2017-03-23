@@ -20,7 +20,7 @@ $(document).ready(function() {
 				var i;
 				$("#searchresults").empty();
 				var h3 = document.createElement("h3");
-				var h3text = document.createTextNode("Select the movie you are searching for below:");
+				var h3text = document.createTextNode("Select the movie you are searching for below:<br>");
 				h3.appendChild(h3text);
 				$("#searchresults").append(h3);
 				for (i = 0; i < data.results.length; i++) {
