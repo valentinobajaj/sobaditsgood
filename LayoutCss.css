@@ -87,7 +87,7 @@
 	display: inline-block;
 }
 
-#advancedsearchresults {
+#searchresults {
   display: flex;
   justify-content: space-around;
   flex-wrap:wrap;
@@ -100,5 +100,3 @@ img{
 	height: 400px;	
 	margin: 20px;
 }
-
-
