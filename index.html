@@ -4,19 +4,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>So Bad It's Good</title>
-	<meta name="description" content="Bringing you the worst, uhhmmm best the movie industry has to offer!">
+	<meta name="description" content="Bringing you the worst, uhhmmm the BEST the movie industry has to offer!">
 	
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
 	
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"> </script>
 
 	<!--Main Layout of this HTML file -->
-	<link rel="stylesheet" type="text/css" href="LayoutCss.css">
-	<script type="text/javascript" src="LayoutJs.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<script type="text/javascript" src="js/layout.js"></script>
 	
 	<!-- CSS for font -->
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext">
@@ -34,7 +33,6 @@
 	<script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
 </head>
 <body class="container body" id="body">
-
 	<div id="top" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -53,8 +51,6 @@
 		</div>
 	</div> <!--End Navbar --> 
 	<br>
-
-
 	<section class="content">
 		<p class="headerTitle">SoBadItsGood.tk - The Place To Find Movies That Are So Bad, They're Good</p>
 		<span class="input input--kuro">
@@ -64,24 +60,16 @@
 			</label>
 		</span>
 	</section>
-
 	<div id="buttons" class="container">
-
 	<a id="surprise" href="#" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-tree-deciduous"></span> Surprise me!</a>
-
 	<a id="advanced" href="#" class="btn btn-lg btn-success secondbutton advancedClick" ><span class="glyphicon glyphicon-search" ></span> Advanced Search </a>
 	</div>
-
 	<br>
 	<br>
-
 	<div id="fadeout">
 	<form id="advancedsearch">
-
 		<fieldset class="fieldset">
 			<legend class="legend">Choose Genres (hold <kbd>ctrl</kbd> for multiple genres):</legend>
-
-
 		<select class="genres green " multiple id="genres_select" class="green">
 			<option name="with_genres" value=28 selected="selected">Action</option>
 			<option name="with_genres" value=12>Adventure</option>
@@ -103,41 +91,29 @@
 			<option name="with_genres" value=10752>War</option>
 			<option name="with_genres" value=37>Western</option>
 		</select>
-
 		<br>
 		<br>
-
 		</fieldset>
-
 		<br>
 		<br>
-
 		<fieldset class="fieldset">
 			<legend class="legend">Sort search results by:</legend>
-			
 			<input type="radio" class="sort" name="sort_by" value="popularity.asc"> 
 			<div class="inputs_text"> Popularity (lowest first) </div>
-			
 			<input type="radio" class="sort" name="sort_by" value="release_date.desc">   
 			<div class="inputs_text"> Release Date (latest first)</div>
-
-			<br>
-			
+			<br>		
 			<input type="radio" class="sort" name="sort_by" value="revenue.asc">
 			<div class="inputs_text"> Revenue (lowest first) </div>
 
 			<input type="radio" class="sort" name="sort_by" value="vote_average.asc" checked>
 			<div class="inputs_text"> Average Vote (lowest first)</div>
-
 			<br>
-
 			<input type="radio" class="sort" name="sort_by" value="vote_count.desc">
 			<div class="inputs_text"> Amount of Votes (highest first)</div>
 		</fieldset>
-
 		<br>
 		<br>
-
 		<fieldset class="fieldset">
 			<legend class="legend">Include adult content:</legend>
 
@@ -151,8 +127,6 @@
 	</form>
 
 	<br>
-
-
 	<div id="searchresults">	
 	</div>
 	<footer class="footer">
@@ -160,6 +134,5 @@
 			<p class="">&copy; 2017 MaartenValentinoKateLara ++ Turing Society <a href="https://tsociety.io" target=_blank>tsociety.io</a></p>
 		</div>
 	</footer>
-
 </body>
 </html>
