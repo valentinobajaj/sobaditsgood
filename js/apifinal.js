@@ -20,7 +20,7 @@ $(document).ready(function() {
 				var i;
 				$("#searchresults").empty();
 				var h3 = document.createElement("h3");
-				var h3text = document.createTextNode("Select the movie you are searching for below:");
+				var h3text = document.createTextNode("Select the movie you are searching for below:<br>");
 				h3.appendChild(h3text);
 				$("#searchresults").append(h3);
 				for (i = 0; i < data.results.length; i++) {
@@ -46,7 +46,7 @@ $(document).ready(function() {
 		var key = "?api_key=9961a998f004227dea7c58371f36ef5f";
 		var searchById = baseURL.concat(movieId,key);
 		$("#searchresults").empty();
-		$("#searchresults").append("<h2>These movies are similar to " + $(this).text() + "<br>...and SO BAD THAT THEY'RE GOOD:</h2>");
+		$("#searchresults").append("<h2>These movies are similar to " + $(this).text() + "...<br>...AND SO BAD THAT THEY'RE GOOD:</h2>");
 		$.get(searchById, function(data){
 			if (data.genres.length < 1) {
 				$("#searchresults").append("<h2>Sorry, we could not find similar (BAD) movies!</h2>");
@@ -117,6 +117,7 @@ $(document).ready(function() {
 		var advancedSearchURL = baseURL.concat(suffix);
 		$.get(advancedSearchURL, function(data) {
 			$("#searchresults").empty();
+			$("#searchresults").append("<h2>Here are your search results.<br>Have a good cringefest!</h2>");
 			var i;
 			for (i = 0; i < 6; i++) {
 				var imageBaseUrl = "https://image.tmdb.org/t/p/w300";

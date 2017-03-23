@@ -85,11 +85,15 @@
 	display: inline-block;
 }
 
-#advancedsearchresults {
-  display: flex;
+#searchresults img{
+  display: inline-block;
   justify-content: space-around;
   flex-wrap:wrap;
   margin: auto;
   padding: 20px;
 }
 
+img{
+	height: 400px;	
+	margin: 20px;
+}

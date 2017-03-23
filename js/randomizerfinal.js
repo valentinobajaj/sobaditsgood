@@ -19,7 +19,7 @@ $(document).ready(function() {
 		settings.url = surpriseUrl;
 		$.ajax(settings).done(function(data) {
 			$("#searchresults").empty();
-			$("#searchresults").append("<h2>Here's your random movie. Have fun watching!</h2>");
+			$("#searchresults").append("<h2>Here's your random movie. Have fun watching!</h2><br>");
 			var movieBaseUrl = "https://www.themoviedb.org/movie/";
 			function getRandomIntInclusive(min, max) {
 				min = Math.ceil(min);
