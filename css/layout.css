@@ -88,11 +88,10 @@ select[multiple] option:checked {
 	display: inline-block;
 }
 
-#advancedsearchresults {
-  display: flex;
+#searchresults img{
+  display: inline-block;
   justify-content: space-around;
-  flex-wrap:wrap;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
 }
 
